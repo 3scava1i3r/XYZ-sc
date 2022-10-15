@@ -21,7 +21,7 @@ abstract contract Stratergy is OwnableUpgradeable,AccessControlUpgradeable {
         virtual
         returns (uint256 actualAmount);
 
-    function Cashback() external virtual;
+    // function Cashback() external virtual;
 
     /**
         @notice The total value locked in the money market, in terms of the underlying stablecoin

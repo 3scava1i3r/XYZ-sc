@@ -29,7 +29,7 @@ contract Main is ReentrancyGuardUpgradeable {
     // Global variables
 
     uint256 public totalDeposit;
-    uint256 public totalFeeOwed;
+    //uint256 public totalFeeOwed;
 
 
     // External Contracts
@@ -167,6 +167,9 @@ contract Main is ReentrancyGuardUpgradeable {
     function stablecoin() public view returns (ERC20) {
         return Stratergy().stablecoin();
     }
+
+
+    function Cashback() {}
 
 
     // Dev-Internal functions
