@@ -1,16 +1,12 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
 
-pragma solidity >0.8.0 <=0.9.0;
-pragma experimental ABIEncoderV2;
-
-interface IStrat {
+interface IStrategy {
     function rewards() external view returns (address);
 
     function gauge() external view returns (address);
 
     function want() external view returns (address);
-
-    function timelock() external view returns (address);
 
     function deposit() external;
 
@@ -30,13 +26,11 @@ interface IStrat {
 
     function balanceOf() external view returns (uint256);
 
-    function getHarvestable() external view returns (uint256);
+    //function getHarvestable() external view returns (uint256);
 
     function harvest() external;
 
-    function setTimelock(address) external;
-
-    function setController(address _controller) external;
+    //function setController(address _controller) external;
 
     function execute(address _target, bytes calldata _data)
         external
